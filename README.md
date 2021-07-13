@@ -26,17 +26,17 @@ To use this image you must do as follows:
 
 ```bash
 # you can use tags latest
-docker pull rotorocloud/random-logger:latest
+docker pull rotorocloud/log-generator:latest
 
 # use different intervals to print logs every random(100, 400) milliseconds
-docker run chentex/random-logger:latest 100 400
+docker run rotorocloud/log-generator:latest 100 400
 
 # use the third parameter so limit the number of loglines (after generating the lines the container will stop).
 # if not set it runs infinite
-docker run chentex/random-logger:latest 100 400 100
+docker run rotorocloud/log-generator:latest 100 400 100
 
 # to run the image just execute
-docker run -d chentex/log-generator
+docker run -d rotorocloud/log-generator
 ```
 
 You will have now a docker container running and generating log messages, locate it running:
@@ -66,7 +66,7 @@ Go to the folder in your terminal and type this:
 
 ```bash
 # cd into folder
-cd random-logger
+cd log-generator
 # Then build the new image
 docker build -f Dockerfile .
 ```
